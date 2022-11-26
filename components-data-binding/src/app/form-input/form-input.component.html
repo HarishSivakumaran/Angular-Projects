@@ -1,0 +1,13 @@
+<div>
+    <div class="UserInput">
+        <h2>User Name - One Way</h2>
+        <!-- one way bound Input -->
+        <input type="text" (input)="onAddUserName($event)"/> 
+        <button [disabled]="userName.length === 0" (click)="userName = '' ">Add User</button>
+        <hr/>
+        <h2>User Name - Two Way</h2>
+        <!-- Two way bound Input -->
+        <input type="text" [(ngModel)]='userName'/> 
+    </div>
+    <p [hidden]="userName.length === 0">The user name is {{ userName }}</p>
+</div>
