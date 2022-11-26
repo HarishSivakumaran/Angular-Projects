@@ -1,0 +1,10 @@
+<div>
+  <button (click)="toggleDetail()">{{ !bShowDetails ? 'Display Details' : 'hide details'}}</button>
+  <!-- <p [hidden]="!bShowDetails" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga atque maxime id officiis illo sit nostrum pariatur quaerat laborum animi! Numquam officia similique tenetur ratione doloremque consequuntur perferendis repudiandae enim.</p> -->
+  <p *ngIf="bShowDetails;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga atque maxime id officiis illo sit nostrum pariatur quaerat laborum animi! Numquam officia similique tenetur ratione doloremque consequuntur perferendis repudiandae enim.</p>
+  <div
+     *ngFor="let clicks of aClick; index as i"
+     [ngStyle]="{backgroundColor : i >= 5 ? 'blue' : 'white'}"
+     [ngClass]="{'textColor': i >= 5}"
+     >{{clicks}}</div>
+</div>
