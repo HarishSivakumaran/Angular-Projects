@@ -9,12 +9,12 @@
   "
 >
   <label for="todo">Todo</label>
-  <input id="todo" placeholder="What to do..." type="text" />
+  <input id="todo" placeholder="What to do..." type="text" (input)="addText($event)" />
   <label for="Prio">Priority</label>
   <select name="cars" id="Prio">
     <option value="High">High Prio</option>
     <option value="Medium">Medium Prio</option>
     <option value="Low">Low Prio</option>
   </select>
-  <button>Add Todo</button>
+  <button (click)="onAddTodo()">Add Todo</button>
 </div>

@@ -1,5 +1,9 @@
 <div>
-  <app-add-todo></app-add-todo>
-  <hr/>
-  <app-todo-list></app-todo-list>
+  <app-add-todo (addTodoToList)="addList($event)"></app-add-todo>
+  <hr />
+  <app-todo-list
+    *ngFor="let todo of aTodoList"
+    [todoText]="todo.todoText"
+    [priority]="todo.prio"
+  ></app-todo-list>
 </div>
