@@ -1,0 +1,25 @@
+label{
+  color: darkgreen;
+  font-weight: bolder;
+  margin-left: 10px;
+  font-size: larger;
+  margin-right: 5px;
+}
+
+input{
+  border-width: 3px;
+  height: 50px;
+  width: 500px;
+}
+
+button{
+  background-color: #252525;
+  border-radius: 5px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+}
+select{
+  margin-right: 5px;
+  border-width: 2px;
+}

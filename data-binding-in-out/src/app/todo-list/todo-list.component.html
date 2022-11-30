@@ -1,4 +1,3 @@
-<div>
-  <h1>{{ prio }}</h1>
-  <h2>{{ todoText }}</h2>
+<div [ngClass]="{High : prio === 'High', Medium : prio === 'Medium', Low : prio === 'Low'}">
+   <h1>{{ todoText }}</h1>
 </div>

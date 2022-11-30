@@ -4,14 +4,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
+    width: 45%;
     margin: 20px;
   "
 >
   <label for="todo">Todo</label>
   <input id="todo" placeholder="What to do..." type="text" (input)="addText($event)" />
   <label for="Prio">Priority</label>
-  <select name="cars" id="Prio">
+  <select id="Prio" (change)="onChangePrio($event)">
+    <option value=""></option>
     <option value="High">High Prio</option>
     <option value="Medium">Medium Prio</option>
     <option value="Low">Low Prio</option>

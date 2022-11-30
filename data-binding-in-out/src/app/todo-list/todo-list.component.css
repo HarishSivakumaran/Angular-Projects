@@ -1,0 +1,22 @@
+div{
+  width: 90%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.High{
+  background-color: red;
+  color: white;
+}
+
+.Medium{
+  background-color: yellow;
+  color: black;
+}
+
+.Low{
+  background-color: cadetblue;
+  color: black;
+}

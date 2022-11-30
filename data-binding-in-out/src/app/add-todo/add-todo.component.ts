@@ -20,6 +20,10 @@ export class AddTodoComponent {
     this.todoText = (oEvent.target as HTMLInputElement).value;
   }
 
+  onChangePrio(oEvent: Event){
+    this.prio = (oEvent.target as HTMLSelectElement).value;
+  }
+
   // addPrio(oEvent : Event){
   //   this.todoText = (oEvent.target as HTMLInputElement).value;
   // }
