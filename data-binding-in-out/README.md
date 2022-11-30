@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/47289765/204826210-e35e3d5e-a55a-4f2f-aeb9-efa39aaf9d0d.png)
+
+
 # DataBindingInOut
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
