@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <app-servers (addServerName)="aServer.push($event)"></app-servers>
+  </div>
+</div>
+<div *ngFor="let a of aServer; let i = index" class="row">
+  <div class="col-xs-6">
+    <app-server>
+      <p class="ms-5">the server name is {{ a.length > 0 ? a : 123 }}</p>
+    </app-server>
+  </div>
+</div>
