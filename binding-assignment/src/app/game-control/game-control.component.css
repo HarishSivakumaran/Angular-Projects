@@ -1,0 +1,24 @@
+div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 20px;
+}
+
+button{
+  height: 50px;
+  width: 20%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.start{
+  background-color: green;
+  color: white;
+}
+
+.end{
+  background-color: red;
+  color: white;
+}

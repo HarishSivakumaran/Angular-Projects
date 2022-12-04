@@ -1,0 +1,5 @@
+<app-game-control (addNewNumber)="aNum.push($event)"></app-game-control>
+<div *ngFor="let num of aNum; let i = index">
+  <app-odd *ngIf="num%2 !== 0" ></app-odd>
+  <app-even *ngIf="num%2 === 0"></app-even>
+</div>
