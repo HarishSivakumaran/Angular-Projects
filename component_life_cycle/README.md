@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/47289765/205479212-f7b58668-a5eb-4c48-82b0-c3a081f330b5.png)
+
+
 # ComponentLifeCycle
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
