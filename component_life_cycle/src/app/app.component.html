@@ -1,0 +1,7 @@
+<div>
+  Div Text
+  <!-- <app-input-form name="input name"> -->
+  <app-input-form *ngIf="title.length > 0" [name]="'input name'">
+    <p>Projected Content  {{ title }}</p>
+  </app-input-form>
+</div>
