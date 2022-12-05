@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (sectionSelectionChange)="currentSection = $event"></app-header>
 <div class="App">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="currentSection === 'Recipes'"></app-recipes>
+      <app-shopping-list *ngIf="currentSection === 'Shopping List'"></app-shopping-list>
     </div>
   </div>
 </div>
