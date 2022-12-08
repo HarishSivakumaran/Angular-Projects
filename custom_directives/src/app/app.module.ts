@@ -4,12 +4,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { StructuralDirectiveDirective } from './structural-directive.directive';
+import { NgSwitchDirectiveComponent } from './directives/ng-switch-directive/ng-switch-directive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicHighlightDirective,
-    BetterHighLightDirective
+    BetterHighLightDirective,
+    StructuralDirectiveDirective,
+    NgSwitchDirectiveComponent
   ],
   imports: [
     BrowserModule

@@ -8,4 +8,20 @@
     Advanced Highlight Directive
   </h2>
   <h2 betterHighlight>Advanced Highlight Directive</h2>
+  <div>
+    <h2 *appStructuralDirective="show"> Structural Directive  </h2>
+  </div>
+  <div>
+    <span [ngSwitch]="num">
+    <p *ngSwitchCase="2">
+    even
+    </p>
+    <p *ngSwitchCase="1">
+    odd
+    </p>
+    <p *ngSwitchDefault>
+    default Value
+    </p>
+    </span>
+  </div>
 </div>
