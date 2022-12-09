@@ -15,23 +15,26 @@
       </button>
     </div>
 
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav">
         <li><a href="#" (click)="changeSection('Recipes')">Recipes</a></li>
-        <li><a href="#" (click)="changeSection('Shopping List')">Shopping List</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" role="button"
-            >Manage <span class="caret"></span
-          ></a>
+        <li>
+          <a href="#" (click)="changeSection('Shopping List')">Shopping List</a>
         </li>
       </ul>
-      <ul class="dropdown-menu">
-        <li><a href="#">Save Data</a></li>
-        <li><a href="#">Fetch Data</a></li>
-      </ul>
+      <div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" appDropdown>
+            <a href="#" class="dropdown-toggle" role="button"
+              >Manage <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Save Data</a></li>
+              <li><a href="#">Fetch Data</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
