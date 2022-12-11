@@ -1,14 +1,16 @@
 <div>
+  <h3>Active Users</h3>
   <app-active-users *ngFor="let user of aActiveUsers; let i = index" >
     <div>
-      <h1>{{user}}</h1>
+      <h3>{{user}}</h3>
       <button (click)="moveToInactive(i)">Set to inactive</button>
     </div>
   </app-active-users>
   <hr/>
+  <h3>Inactive Users</h3>
   <app-inactive-users *ngFor="let user of aInActiveUsers; let i = index">
     <div>
-      <h1>{{user}}</h1>
+      <h3>{{user}}</h3>
       <button (click)="moveToActive(i)">Set to active</button>
     </div>
   </app-inactive-users>
