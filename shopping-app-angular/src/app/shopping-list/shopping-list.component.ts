@@ -1,6 +1,6 @@
 import { ShoppingListService } from './shopping-list.service';
 import { Component, OnInit } from '@angular/core';
-import { Ingredient } from '../shared/ingredient.component';
+import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
   selector: 'app-shopping-list',
@@ -13,7 +13,6 @@ export class ShoppingListComponent implements OnInit {
   constructor(private shoppingListService: ShoppingListService) {
     this.shoppingListService.addIngredient.subscribe(
       (oIngredient: Ingredient) => {
-        this.aIngredientList.push(oIngredient);
         this.shoppingListService.addIngredientToList(oIngredient);
       }
     );
@@ -23,5 +22,10 @@ export class ShoppingListComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.aIngredientList = this.shoppingListService.getIngredients();
+    this.shoppingListService.ingredientsListChanged.subscribe(
+      (aIngList: Ingredient[]) => {
+        this.aIngredientList = aIngList;
+      }
+    );
   }
 }
