@@ -1,0 +1,61 @@
+<div class="search">
+  <form (submit)="getWeatherData(inputControl)">
+    <input type="text" placeholder="Search city" #inputControl/>
+  </form>
+</div>
+<div class="container">
+  <div class="image-container">
+    <img src="../assets/evening.jpg" *ngIf="weatherData?.current.temp_c > 25" />
+    <img src="../assets/night.jpg" *ngIf="weatherData?.current.temp_c <= 25" />
+    <div class="weather-data">
+      <div class="location">{{ city }}</div>
+      <div class="temperature">
+        {{ weatherData?.current.temp_c | number : "1.0-0" }} °C
+      </div>
+    </div>
+  </div>
+  <div class="info-container">
+    <div class="more-info-label">More Information</div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/min-temp.jpg" />
+          <span>min</span>
+        </div>
+        <div class="info-block-value">
+          {{ weatherData?.current.temp_c - 10 | number : "1.0-0" }} °C
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/temp-max.jpg" />
+          <span>max</span>
+        </div>
+        <div class="info-block-value">
+          {{ weatherData?.current.temp_c + 7 | number : "1.0-0" }} °C
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/humid.jpg" />
+          <span>humidity</span>
+        </div>
+        <div class="info-block-value">
+          {{ weatherData?.current.humidity | number : "1.0-0" }} %
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/wind.jpg" />
+          <span>wind</span>
+        </div>
+        <div class="info-block-value">
+          {{ weatherData?.current.wind_kph | number : "1.0-0" }} km/h
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
