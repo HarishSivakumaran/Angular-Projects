@@ -24,6 +24,10 @@ export class AppComponent {
   }
 
   getWeatherData(oInput: HTMLInputElement) {
-    this.weatherService.getWeatherData(oInput.value);
+    this.weatherService.getWeatherData(oInput.value).subscribe((oWeatherData) => {
+      this.weatherData = oWeatherData;
+      this.city = this.weatherData.location.name;
+    });
+    return false;
   }
 }
