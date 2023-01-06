@@ -1,0 +1,15 @@
+img{
+  width: 40vmin;
+  height: 56vmin;
+  overflow: hidden;
+  margin: 0;
+}
+
+div{
+  display: flex;
+  flex-direction: row;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
