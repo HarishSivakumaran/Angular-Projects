@@ -15,6 +15,7 @@ export class AppSliderComponent {
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
+    document.getElementsByClassName("track")[0].animate({transform: `translate(${this.percentage}%, -50%)`}, {duration: 0, fill: "forwards"});
 
     window.onmousedown = e => {
       this.mousDown = e.clientX;
@@ -26,6 +27,14 @@ export class AppSliderComponent {
       const maxWidth = window.innerWidth/2;
 
       this.percentage = this.pevPercentage + ((mouseDelta / maxWidth) * -100);
+
+      document.getElementsByClassName("track")[0].animate({transform: `translate(${this.percentage}%, -50%)`}, {duration: 1200, fill: "forwards"});
+      var list: any = document.getElementsByClassName("image");
+
+      for(var i of list){
+          // i.style.objectPosition = `${this.percentage + 100}% 50%`;
+          i.animate({objectPosition : `${this.percentage + 100}% 50%`}, {duration: 1200, fill: "forwards"});
+      }
 
     }
 

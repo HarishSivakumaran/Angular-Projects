@@ -3,6 +3,7 @@ img{
   height: 56vmin;
   overflow: hidden;
   margin: 0;
+  object-fit: cover;
 }
 
 div{
